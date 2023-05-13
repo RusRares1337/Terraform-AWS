@@ -3,7 +3,7 @@
 
 # tf state files 
 *.tfstate
-*.tfstate.*
+
 
 # terraform variable files
 *.tfvars
