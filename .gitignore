@@ -6,8 +6,6 @@
 *.tfstate.*
 
 
-# terraform variable files
-
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
