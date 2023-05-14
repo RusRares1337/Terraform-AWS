@@ -1,5 +1,5 @@
 resource "aws_subnet" "myapp-subnet-1" {
-    vpc_id = aws_vpc.myapp-vpc.id
+    vpc_id = var.vpc_id
     cidr_block = var.subnet_cidr_block
     availability_zone = var.avail_zone
     tags = {
@@ -7,8 +7,15 @@ resource "aws_subnet" "myapp-subnet-1" {
     }
 }
 
+resource "aws_internet_gateway" "myapp-internet-gateway" {
+    vpc_id = var.vpc_id
+    tags = {
+        Name = "${var.env_prefix}-internet-gateway"
+    }
+} 
+
 resource "aws_route_table" "myapp-route-table" {
-    vpc_id = aws_vpc.myapp-vpc.id
+    default_route_table_id = var.default_route_table_id
 
 
     route {
@@ -17,12 +24,5 @@ resource "aws_route_table" "myapp-route-table" {
     }
     tags = {
         Name = "${var.env_prefix}-route-table"
-    }
-}
-
-resource "aws_internet_gateway" "myapp-internet-gateway" {
-    vpc_id = aws_vpc.myapp-vpc.id
-    tags = {
-        Name = "${var.env_prefix}-internet-gateway"
     }
 }
