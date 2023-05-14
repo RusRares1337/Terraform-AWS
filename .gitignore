@@ -12,3 +12,6 @@ terraform.rc
 
 # Ignore MacOs system file
 .DS_store
+
+# Ignore crash logs
+crash.log
