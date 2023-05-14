@@ -1,5 +1,5 @@
-# local terraform directory
-.terraform/*
+# local .terraform directories
+**/.terraform/*
 
 # tf state files 
 *.tfstate
@@ -8,3 +8,10 @@
 
 # terraform variable files
 *.tfvars
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore MacOs system file
+.DS_store
