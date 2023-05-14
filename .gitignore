@@ -7,7 +7,6 @@
 
 
 # terraform variable files
-*.tfvars
 
 # Ignore CLI configuration files
 .terraformrc
