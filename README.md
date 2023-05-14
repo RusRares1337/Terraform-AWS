@@ -1,5 +1,5 @@
 # Terraform-AWS
-Provision AWS infrastructure:
+Provision AWS infrastructure from scratch:
 1.Create custom VPC
 2.Create custom subnet
 3.Connecting VPC to internet using Internet Gateway
