@@ -1,0 +1,8 @@
+# Terraform-AWS
+Provision AWS infrastructure:
+1.Create custom VPC
+2.Create custom subnet
+3.Connecting VPC to internet using Internet Gateway
+4.Inside the subnet I have deployed EC2 instance
+5.EC2 instance run docker container where I have deployed nginx
+6.Created Security Group (Firewall) to access the nginx server running on the EC2 from the browser and also from SSH
