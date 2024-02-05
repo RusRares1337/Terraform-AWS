@@ -101,11 +101,11 @@ resource "aws_instance" "myapp-server" {
     instance_type = var.instance_type
 
     subnet_id = aws_subnet.myapp-sub-net1.id
-    vpc_security_group_ids = ["aws_default_security_group.default_sg.id"]
+    vpc_security_group_ids = ["${aws_security_group.myapp-sg.id}"]
     availability_zone = var.avail_zone
 
     associate_public_ip_address = true
-    key_name = "ec2.pem"
+    key_name = "ec2"
 
     tags = {
         Name = "${var.env_prefix}-server"
