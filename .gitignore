@@ -4,4 +4,6 @@
 # tf state files 
 *.tfstate
 *.tfstate.*
+*.lock.*
+
 
