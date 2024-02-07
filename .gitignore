@@ -1,9 +1,13 @@
 # local .terraform dir
-.terraform/*
+**/*.terraform/*
 
 # tf state files 
 *.tfstate
 *.tfstate.*
-*.lock.*
 
+.terraformrc
+terraform.rc
 
+.DS_Store
+
+crash.log
